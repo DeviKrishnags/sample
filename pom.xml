@@ -5,7 +5,7 @@
   <groupId>com.codebind</groupId>
   <artifactId>myfirstmavenproject</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>myfirstmavenproject</name>
   <url>http://maven.apache.org</url>
@@ -22,4 +22,16 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+    <distributionManagement>
+    <snapshotRepository>
+         <id>nexus</id>
+         <url>http://52.173.28.7:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+               <repository>
+         <id>nexus</id>
+         <url>http://52.173.28.7:8081/repository/maven-releases/</url>
+               </repository>
+  </distributionManagement>
+
 </project>
+
